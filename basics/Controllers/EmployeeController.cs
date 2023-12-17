@@ -14,7 +14,8 @@ public class EmployeeController : Controller
 
     public ViewResult Index2()
     {
-        var names = new string[]{
+        var names = new string[]
+        {
             "Ahmet",
             "Mehmet",
             "Can"
@@ -25,11 +26,12 @@ public class EmployeeController : Controller
 
     public IActionResult Index3()
     {
-        var list = new List<Employee>{
+        List<Employee> list = new()
+        {
             new(1, "Hasan", "Ayhaner", 23),
             new(2, "Mustafa", "Ayhaner", 14),
             new(3, "Ahmet", "Ayhaner", 12),
-    };
+        };
         return View("Index3", list);
     }
 }
